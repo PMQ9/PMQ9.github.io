@@ -147,4 +147,4 @@ MIT License - Feel free to use this template for your own portfolio
 
 ---
 
-**Last Updated**: October 2024
+**Last Updated**: October 2024 
