@@ -37,13 +37,25 @@ body.dark-mode .project-card,
 body.dark-mode .award-card,
 body.dark-mode .publication-card {
     background-color: var(--bg-secondary) !important;
-    color: var(--text-primary);
+}
+
+body.dark-mode .skill-category,
+body.dark-mode .education-card,
+body.dark-mode .project-card,
+body.dark-mode .award-card,
+body.dark-mode .publication-card,
+body.dark-mode .skill-category p,
+body.dark-mode .education-card p,
+body.dark-mode .project-card p,
+body.dark-mode .award-card p,
+body.dark-mode .publication-card p {
+    color: var(--text-primary) !important;
 }
 
 body.dark-mode p,
 body.dark-mode li,
 body.dark-mode .publication-description {
-    color: var(--text-secondary);
+    color: var(--text-primary) !important;
 }
 
 body.dark-mode h1,
@@ -51,11 +63,13 @@ body.dark-mode h2,
 body.dark-mode h3,
 body.dark-mode h4,
 body.dark-mode h5,
-body.dark-mode h6 {
-    color: var(--text-primary);
+body.dark-mode h6,
+body.dark-mode .section-title {
+    color: var(--text-primary) !important;
 }
 
-body.dark-mode .text-muted {
+body.dark-mode .text-muted,
+body.dark-mode .text-secondary {
     color: var(--text-secondary) !important;
 }
 
@@ -78,6 +92,44 @@ body.dark-mode .section-title::after {
 
 #theme-toggle:hover {
     transform: rotate(20deg);
+}
+
+/* Dark mode specific card styling */
+body.dark-mode .award-card,
+body.dark-mode .publication-card {
+    background-color: var(--bg-secondary) !important;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .award-card h6,
+body.dark-mode .publication-card h6,
+body.dark-mode .award-card h5,
+body.dark-mode .publication-card h5 {
+    color: var(--text-primary) !important;
+}
+
+body.dark-mode .award-card p,
+body.dark-mode .publication-card p {
+    color: var(--text-secondary) !important;
+}
+
+body.dark-mode .award-image {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+body.dark-mode .tech-stack,
+body.dark-mode .publication-tags {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode .tech-badge {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: var(--text-primary) !important;
+}
+
+body.dark-mode .pub-tag {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: var(--text-primary) !important;
 }
 
 * {
