@@ -247,6 +247,130 @@ section {
     transform: scale(1.05);
 }
 
+/* Achievements Section */
+#achievements {
+    background: white;
+}
+
+.award-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.award-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.award-image {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #f0f0f0;
+}
+
+.award-card h6 {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.award-card .text-muted {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.award-card p {
+    color: #666;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.publication-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.publication-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.publication-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.publication-header h6 {
+    color: var(--dark-color);
+    font-weight: 700;
+    margin: 0;
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.publication-year {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.publication-description {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.publication-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.pub-tag {
+    display: inline-block;
+    background: #f0f0f0;
+    color: var(--primary-color);
+    padding: 0.3rem 0.7rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.pub-tag:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+}
+
 /* Contact Section */
 #contact {
     background: white;

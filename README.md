@@ -143,7 +143,7 @@ MIT License - Feel free to use this template for your own portfolio
 
 - Email: [phamminhquang289@gmail.com](mailto:phamminhquang289@gmail.com)
 - GitHub: [@PMQ9](https://github.com/PMQ9)
-- LinkedIn: [Connor Pham](https://www.linkedin.com/in/connor-pham-2b7a6a1b9/)
+- LinkedIn: [Connor Pham](https://www.linkedin.com/in/quang-pham-392203244/)
 
 ---
 
