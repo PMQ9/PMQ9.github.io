@@ -1,3 +1,32 @@
+// Dark Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const html = document.documentElement;
+const body = document.body;
+
+// Initialize dark mode from localStorage (default to dark mode)
+const currentTheme = localStorage.getItem('theme') || 'dark';
+if (currentTheme === 'dark') {
+    body.classList.add('dark-mode');
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+} else {
+    body.classList.remove('dark-mode');
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+}
+
+// Theme toggle functionality
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    // Update localStorage
+    const isDarkMode = body.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+
+    // Update icon
+    themeToggle.innerHTML = isDarkMode
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

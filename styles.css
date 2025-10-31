@@ -4,6 +4,80 @@
     --accent-color: #17a2b8;
     --dark-color: #212529;
     --light-color: #f8f9fa;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --bg-primary: #1a1a2e;
+    --bg-secondary: #0f0f1e;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+}
+
+body.dark-mode {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+body.dark-mode section {
+    background-color: var(--bg-primary) !important;
+}
+
+body.dark-mode .bg-light {
+    background-color: var(--bg-secondary) !important;
+}
+
+body.dark-mode .skill-category,
+body.dark-mode .education-card,
+body.dark-mode .project-card,
+body.dark-mode .award-card,
+body.dark-mode .publication-card {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary);
+}
+
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode .publication-description {
+    color: var(--text-secondary);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--text-primary);
+}
+
+body.dark-mode .text-muted {
+    color: var(--text-secondary) !important;
+}
+
+body.dark-mode footer {
+    background-color: var(--bg-secondary) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode .navbar {
+    background-color: var(--bg-secondary) !important;
+}
+
+body.dark-mode .section-title::after {
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+}
+
+#theme-toggle {
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: rotate(20deg);
 }
 
 * {
