@@ -533,6 +533,96 @@ section {
     transform: scale(1.05);
 }
 
+/* Experience Section */
+#experience {
+    background-color: var(--light-color);
+}
+
+.experience-timeline {
+    position: relative;
+}
+
+.experience-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.experience-card h5 {
+    color: var(--dark-color);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.experience-card h6 {
+    color: var(--dark-color);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.experience-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.experience-card ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    color: #555;
+}
+
+.experience-card ul li {
+    margin-bottom: 0.6rem;
+    line-height: 1.6;
+}
+
+.experience-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.highlight-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(13, 110, 253, 0.3);
+}
+
+/* Dark mode experience card styling */
+body.dark-mode .experience-card {
+    background-color: var(--bg-secondary) !important;
+}
+
+body.dark-mode .experience-card h5,
+body.dark-mode .experience-card h6 {
+    color: var(--text-primary) !important;
+}
+
+body.dark-mode .experience-card p,
+body.dark-mode .experience-card ul,
+body.dark-mode .experience-card li {
+    color: var(--text-secondary) !important;
+}
+
 /* Contact Section */
 #contact {
     background: white;

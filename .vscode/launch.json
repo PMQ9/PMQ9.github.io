@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Serve Local (Port 8000)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/serve.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
