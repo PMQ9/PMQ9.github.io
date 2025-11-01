@@ -132,6 +132,26 @@ body.dark-mode .pub-tag {
     color: var(--text-primary) !important;
 }
 
+body.dark-mode .education-card {
+    background-color: var(--bg-secondary) !important;
+}
+
+body.dark-mode .education-card strong {
+    color: var(--text-primary) !important;
+}
+
+body.dark-mode .education-card p {
+    color: var(--text-secondary) !important;
+}
+
+body.dark-mode .publication-link:hover h6 {
+    color: #64b5f6 !important;
+}
+
+body.dark-mode .publication-header h6 {
+    color: var(--text-primary) !important;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -148,27 +168,32 @@ body {
 .hero-section {
     background: linear-gradient(135deg, var(--dark-color) 0%, #1a1a2e 100%);
     color: white;
-    min-height: 500px;
+    min-height: auto;
+    padding: 3rem 0 !important;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .hero-section h1 {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
     letter-spacing: -1px;
     animation: fadeInDown 0.8s ease-out;
+    margin-bottom: 0.5rem !important;
 }
 
 .hero-section .lead {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 300;
     animation: fadeInUp 0.8s ease-out 0.2s both;
+    margin-bottom: 0.5rem !important;
 }
 
 .hero-section .text-secondary {
     animation: fadeInUp 0.8s ease-out 0.4s both;
+    font-size: 0.95rem;
+    margin-bottom: 1rem !important;
 }
 
 .social-links {
@@ -445,12 +470,23 @@ section {
     margin-bottom: 1rem;
 }
 
+.publication-link {
+    text-decoration: none;
+    color: inherit;
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.publication-link:hover h6 {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
 .publication-header h6 {
     color: var(--dark-color);
     font-weight: 700;
     margin: 0;
-    flex: 1;
-    margin-right: 1rem;
+    transition: color 0.3s ease;
 }
 
 .publication-year {
