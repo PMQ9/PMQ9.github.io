@@ -209,6 +209,72 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+.hero-image {
+    max-width: 100%;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-out 0.8s both;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+}
+
+.hero-image-caption {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    font-style: italic;
+    animation: fadeIn 1s ease-out 1s both;
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    .hero-image {
+        max-height: 300px;
+        margin-top: 2rem;
+    }
+}
+
+/* About Section Image */
+.about-image {
+    width: 100% !important;
+    /*width: 80% !important;*/
+    max-height: 475px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.about-image:hover {
+    transform: scale(1.02);
+}
+
+.about-image-caption {
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 991px) {
+    .about-image {
+        max-height: 300px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
 /* Section Styling */
 .section-title {
     font-size: 2.5rem;
@@ -272,6 +338,19 @@ section {
 .education-card strong {
     font-size: 1.1rem;
     color: var(--dark-color);
+}
+
+.education-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.education-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 /* Skills Section */
