@@ -169,7 +169,7 @@ body {
     background: linear-gradient(135deg, var(--dark-color) 0%, #1a1a2e 100%);
     color: white;
     min-height: auto;
-    padding: 3rem 0 !important;
+    padding: 1.0rem 0 !important;
     display: flex;
     align-items: center;
     justify-content: center;

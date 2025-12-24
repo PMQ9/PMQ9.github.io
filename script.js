@@ -3,15 +3,33 @@ const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
 const body = document.body;
 
-// Initialize dark mode from localStorage (default to dark mode)
-const currentTheme = localStorage.getItem('theme') || 'dark';
+// Detect system preference
+const getSystemPreference = () => {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+};
+
+// Initialize theme: localStorage > system preference
+const savedTheme = localStorage.getItem('theme');
+const currentTheme = savedTheme || getSystemPreference();
+
 if (currentTheme === 'dark') {
     body.classList.add('dark-mode');
-    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i> <span class="theme-label">Light</span>';
 } else {
     body.classList.remove('dark-mode');
-    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i> <span class="theme-label">Dark</span>';
 }
+
+// Listen for system theme changes (if user hasn't manually set preference)
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+        const isDark = e.matches;
+        body.classList.toggle('dark-mode', isDark);
+        themeToggle.innerHTML = isDark
+            ? '<i class="fas fa-sun"></i> <span class="theme-label">Light</span>'
+            : '<i class="fas fa-moon"></i> <span class="theme-label">Dark</span>';
+    }
+});
 
 // Theme toggle functionality
 themeToggle.addEventListener('click', () => {
@@ -21,10 +39,10 @@ themeToggle.addEventListener('click', () => {
     const isDarkMode = body.classList.contains('dark-mode');
     localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
 
-    // Update icon
+    // Update icon and label
     themeToggle.innerHTML = isDarkMode
-        ? '<i class="fas fa-sun"></i>'
-        : '<i class="fas fa-moon"></i>';
+        ? '<i class="fas fa-sun"></i> <span class="theme-label">Light</span>'
+        : '<i class="fas fa-moon"></i> <span class="theme-label">Dark</span>';
 });
 
 // Smooth scrolling for navigation links
