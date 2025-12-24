@@ -8,9 +8,9 @@ const getSystemPreference = () => {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 };
 
-// Initialize theme: localStorage > system preference
+// Initialize theme: localStorage > system preference > light (default)
 const savedTheme = localStorage.getItem('theme');
-const currentTheme = savedTheme || getSystemPreference();
+const currentTheme = savedTheme || getSystemPreference() || 'light';
 
 if (currentTheme === 'dark') {
     body.classList.add('dark-mode');
