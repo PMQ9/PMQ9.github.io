@@ -139,6 +139,10 @@ The site uses:
 
 MIT License - Feel free to use this template for your own portfolio
 
+## Analytics
+
+- Dashboard: [pmq9.goatcounter.com](https://pmq9.goatcounter.com)
+
 ## Contact
 
 - Email: [phamminhquang289@gmail.com](mailto:phamminhquang289@gmail.com)
