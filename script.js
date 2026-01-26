@@ -1,3 +1,8 @@
+// Clean tracking parameters from URL (after GoatCounter captures them)
+if (window.location.search.includes('ref=')) {
+    window.history.replaceState({}, '', window.location.pathname + window.location.hash);
+}
+
 // Dark Mode Toggle
 const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;

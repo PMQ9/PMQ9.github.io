@@ -44,12 +44,15 @@ def sanitize_filename_for_ref(filename: str) -> str:
     name = Path(filename).stem
     # Replace spaces and special chars with underscores
     name = re.sub(r'[^a-zA-Z0-9_-]', '_', name)
+    # Lowercase for consistency
+    name = name.lower()
+    # Remove "connor_pham" (redundant)
+    name = re.sub(r'_?connor_?pham_?', '_', name)
     # Collapse multiple underscores
     name = re.sub(r'_+', '_', name)
     # Remove leading/trailing underscores
     name = name.strip('_')
-    # Lowercase for consistency
-    return name.lower()
+    return name
 
 
 def add_tracking_to_url(url: str, ref_value: str) -> str:
