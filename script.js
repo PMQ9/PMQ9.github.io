@@ -1,6 +1,9 @@
 // Clean tracking parameters from URL (after GoatCounter captures them)
 if (window.location.search.includes('ref=')) {
-    window.history.replaceState({}, '', window.location.pathname + window.location.hash);
+    // Delay cleanup to ensure GoatCounter captures the ref first
+    setTimeout(() => {
+        window.history.replaceState({}, '', window.location.pathname + window.location.hash);
+    }, 1000);
 }
 
 // Dark Mode Toggle
