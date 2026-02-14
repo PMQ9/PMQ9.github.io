@@ -1,6 +1,20 @@
-// Clean tracking parameters from URL (after GoatCounter captures them)
+// Track resume slug from hash (e.g. #oak, #reef — set by add_tracking_to_pdf.py)
+// If the hash is a 3-4 letter word that doesn't match a real page section, log it to GoatCounter
+(function() {
+    var hash = window.location.hash.replace('#', '');
+    if (hash && /^[a-z]{3,4}$/.test(hash) && !document.getElementById(hash)) {
+        // Fire GoatCounter event with the slug as the path
+        var img = new Image();
+        img.src = 'https://pmq9.goatcounter.com/count?p=/resume-' + hash + '&t=' + encodeURIComponent(document.title);
+        // Clean the hash after a short delay
+        setTimeout(function() {
+            window.history.replaceState({}, '', window.location.pathname);
+        }, 500);
+    }
+})();
+
+// Clean old-style ?ref= tracking parameters from URL
 if (window.location.search.includes('ref=')) {
-    // Delay cleanup to ensure GoatCounter captures the ref first
     setTimeout(() => {
         window.history.replaceState({}, '', window.location.pathname + window.location.hash);
     }, 1000);
