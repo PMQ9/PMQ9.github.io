@@ -353,6 +353,58 @@ section {
     flex-shrink: 0;
 }
 
+/* Prison nickname tooltip */
+.prison-tooltip {
+    position: relative;
+    cursor: help;
+    border-bottom: 1px dashed currentColor;
+    outline: none;
+}
+
+.prison-tooltip-content {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 8px);
+    z-index: 1000;
+    padding: 8px;
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    width: min(440px, 90vw);
+}
+
+.prison-tooltip-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.prison-tooltip:hover .prison-tooltip-content,
+.prison-tooltip:focus .prison-tooltip-content,
+.prison-tooltip:focus-within .prison-tooltip-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+body.dark-mode .prison-tooltip-content {
+    background: #16213e;
+    border-color: #3a3a5c;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 576px) {
+    .prison-tooltip-content {
+        left: auto;
+        right: 0;
+    }
+}
+
 /* Skills Section */
 .skill-category {
     background: white;
