@@ -275,6 +275,35 @@ body {
     }
 }
 
+/* Name Origin */
+.name-origin {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.name-origin-image {
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+}
+
+@media (max-width: 576px) {
+    .name-origin {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .name-origin-image {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
 /* Section Styling */
 .section-title {
     font-size: 2.5rem;
